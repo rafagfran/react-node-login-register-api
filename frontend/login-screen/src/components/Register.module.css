@@ -1,0 +1,75 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(48, 39, 59, 0.171);
+}
+
+.register .container {
+    background-color: rgba(85, 69, 143, 0.274);
+    border-radius: 50px;
+    min-width: 40%; /* Changed from max-width to min-width */
+    height: auto;
+    display: inline-block;
+    padding: 10px;
+}
+
+.register .container h2 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    color: #ffffffcc;
+    font-size: 2em;
+}
+
+.register .container .credentials {
+    text-align: center;
+    margin: 0 10%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register .container .credentials input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.61);
+    outline: none;
+    caret-color: white;
+    padding: 0 0 10px 0;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.register .container .credentials input:focus {
+    color: white;
+}
+
+.register .container .credentials input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px rgb(61, 46, 124) inset;
+    -webkit-text-fill-color: white !important;
+}
+
+.register .container .credentials input::placeholder {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+.btn {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.register .container .buttonRegister {
+    background: linear-gradient(90deg, rgba(45, 24, 89, 1) 7%, rgba(63, 32, 128, 1) 35%, rgba(85, 50, 187, 1) 61%, rgba(87, 58, 233, 1) 86%);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    width: 80%;
+    height: 50px;
+}
+
+.register .container .buttonRegister:hover {
+    cursor: pointer;
+}
