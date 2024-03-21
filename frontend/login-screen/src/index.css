@@ -27,6 +27,12 @@ body{
   text-align: center;
   padding: 10px;
 }
+.login .container .errorMessage{
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.05em;
+}
+
 .login .container .credentials{
   display: flex;
   flex-direction: column;
@@ -42,9 +48,20 @@ body{
   outline: none;
   caret-color: white;
   padding: 10px 20px;
+  color: rgba(255, 255, 255, 0.705);
+}
+.login .container .credentials input:focus{
+  color: white;
+}
+
+.login .container .credentials input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px rgb(61, 46, 124)inset;
+  -webkit-text-fill-color: white !important;
+
 }
 
 .login .container .credentials input::placeholder{
+ 
   color: rgba(255, 255, 255, 0.404);;
 }
 
@@ -88,3 +105,4 @@ body{
 .login .container .buttonLogin:hover{
   cursor: pointer;
 }
+
