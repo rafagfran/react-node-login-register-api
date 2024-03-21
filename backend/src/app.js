@@ -52,4 +52,36 @@ app.post('/login', async (req, res) => {
    }
 })
 
+// USER REGISTRATION
+app.post('/register', async (req, res) => {
+   
+   const { user, password } = req.body
+
+   console.log(user, password)
+
+   try{
+      const results = await new Promise((resolve, reject) =>{
+         connection.query('INSERT INTO users(username, password) VALUES(?, ?)', [user, password], (error, result) => {
+            if(error){
+               reject(error)
+            }else{
+               resolve(result)
+               
+            }
+         })
+      })
+      
+      if(results.affectedRows > 0){
+         res.status(200).json("registred")
+         console.log(results.affectedRows)
+      }else{
+         res.status(200).json("Error in register: affected rows: ", results.affectedRows)
+      }
+
+      
+
+   }catch(error){
+      res.status(400).json(error)
+   }
+})
 module.exports = app
