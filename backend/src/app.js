@@ -1,29 +1,12 @@
 const express = require('express')
-const connection = require('./database.js')
+const connection = require('./config/db.js')
+const routes = require('./routes/routes.js')
 
 const app = express()
 app.use(express.json())
 
-// GET ALL USERS LIST
-app.get('/users', async(req, res) => {
-   try{
-      const results = await new Promise((resolve,reject) => {
-         connection.query('SELECT * FROM users', (error, result) => {
-            if (error){
-               reject(error)
-            }else{
-               resolve(result)
-            }
-         })
-      })
-   
-      res.status(200).json(results)
-   }catch(error){
-      res.status(400).json(results)
-   }
-   
-   
-})
+app.use(routes)
+
 
 // VALIDATE LOGIN
 app.post('/login', async (req, res) => {
