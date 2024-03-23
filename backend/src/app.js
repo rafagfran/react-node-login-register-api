@@ -1,19 +1,19 @@
 const express = require('express')
 const connection = require('./config/db.js')
 const routes = require('./routes/routes.js')
-
+const cors = require('cors')
 const app = express()
+
 app.use(express.json())
-
+app.use(cors())
 app.use(routes)
-
 
 // VALIDATE LOGIN
 app.post('/login', async (req, res) => {
    try{
-      const { user, password } = req.body
+      const { username, password } = req.body
       const results = await new Promise((resolve, reject) => {
-         connection.query('SELECT COUNT(*) AS count FROM users WHERE username = ? AND password = ?', [user, password], (error, result) => {
+         connection.query('SELECT COUNT(*) AS count FROM users WHERE username = ? AND password = ?', [username, password], (error, result) => {
             if (error) {
                reject(error);
             } else {

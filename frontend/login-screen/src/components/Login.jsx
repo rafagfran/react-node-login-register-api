@@ -5,7 +5,7 @@ import Avatar from '/src/assets/Avatar.png'
 
 function Login(){
 
-    const[email, setEmail] = useState('');
+    const[username, setUsername] = useState('');
     const[password, setPassword] = useState('');
     const[error, setError] = useState('');
     const[user, setUser] = useState(null);
@@ -14,14 +14,14 @@ function Login(){
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        console.log(email, password);
+        console.log(username, password);
         try{
             const response = await axios.post('http://localhost:3000/login',
-            JSON.parse(JSON.stringify({email, password}))
+            JSON.parse(JSON.stringify({username, password}))
             )
 
             setUser(response.data)
-            setError('')
+            setError(`Welcome ${username}`)
         } catch (error){
             if(!error?.response){
                 setError('Error to acess server')
@@ -37,11 +37,11 @@ function Login(){
                 <img className="avatar_image" src={Avatar}></img>
                 <div className="credentials">
                         <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Email ID" 
+                            type="text" 
+                            name="username" 
+                            placeholder="username" 
                             required
-                            onChange={(e) => setEmail(e.target.value)}
+                            onChange={(e) => setUsername(e.target.value)}
                         ></input>
                         <input 
                             type="password" 
