@@ -1,10 +1,14 @@
-
-import Login from "./components/Login"
+import Register from './components/Register.jsx'
+import Login from "./components/Login.jsx"
+import { Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Login/>
+      <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+      </Routes> 
     </>
   )
 }

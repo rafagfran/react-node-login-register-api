@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  text-decoration: none;
+  color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,100 +11,3 @@ body{
   background: rgb(2,0,36);
   background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(51,16,124,1) 41%, rgba(53,75,157,1) 80%);
 }
-
-.login{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:100vh;
-  background-color: rgba(48, 39, 59, 0.171);
-}
-
-.login .container{
-  background-color: rgba(85, 69, 143, 0.274);
-  border-radius: 50px;
-  max-width: 50%;
-  height: auto;
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-}
-.login .container .errorMessage{
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 1.05em;
-}
-
-.login .container .credentials{
-  display: flex;
-  flex-direction: column;
-  margin: 0 10%;
-  gap: 50px;
-  
-}
-
-.login .container .credentials input{
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid white;
-  outline: none;
-  caret-color: white;
-  padding: 10px 20px;
-  color: rgba(255, 255, 255, 0.705);
-}
-.login .container .credentials input:focus{
-  color: white;
-}
-
-.login .container .credentials input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px rgb(61, 46, 124)inset;
-  -webkit-text-fill-color: white !important;
-
-}
-
-.login .container .credentials input::placeholder{
- 
-  color: rgba(255, 255, 255, 0.404);;
-}
-
-.login .avatar_image{
-  max-width: 30%;
-  margin-bottom: 30px;
-  border-radius: 50%;
-  background-color: rgba(122, 122, 122, 0.144);
-}
-
-.login .container .userPreference{
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 25%;
-}
-
-.login .container .userPreference .remember label{
-  margin-left: 10px;
-  color: rgba(143, 143, 143, 0.781);
-}
-
-.login .container .userPreference .forgotPass{
-  text-decoration: none;
-  font-style: italic;
-  color: rgba(143, 143, 143, 0.781);
-}
-
-.login .container .buttonLogin{
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, rgba(45,24,89,1) 7%, rgba(63,32,128,1) 35%, rgba(85,50,187,1) 61%, rgba(87,58,233,1) 86%);
-  border: none;
-  border-radius: 20px;
-  color: white;
-  width: 80%;
-  height: 50px;
-}
-.login .container .userPreference .remember label:hover,
-.login .container .userPreference .remember input:hover,
-.login .container .buttonLogin:hover{
-  cursor: pointer;
-}
-

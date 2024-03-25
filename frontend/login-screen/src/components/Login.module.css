@@ -1,0 +1,102 @@
+/* Estilos para a seção de login */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(48, 39, 59, 0.171);
+}
+
+/* Estilos para o container principal */
+.login .container {
+    background-color: rgba(85, 69, 143, 0.274);
+    border-radius: 3em; /* Utilizando unidade relativa */
+    max-width: 50%;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 1em; /* Utilizando unidade relativa */
+}
+
+/* Mensagem de erro */
+.login .container .errorMessage {
+    margin-top: 1em;
+    margin-bottom: 1em; /* Utilizando unidade relativa */
+    font-size: 1.05em;
+    color: #868686;
+}
+
+/* Campos de entrada de credenciais */
+.login .container .credentials {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    gap: 2em; /* Utilizando unidade relativa */
+}
+
+.login .container .credentials input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    caret-color: white;
+    padding: 1em 2em; /* Utilizando unidade relativa */
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.login .container .credentials input::placeholder {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+/* Imagem do avatar */
+.login .avatar_image {
+    max-width: 30%;
+    margin-bottom: 2em; /* Utilizando unidade relativa */
+    border-radius: 50%;
+    background-color: rgba(122, 122, 122, 0.144);
+}
+
+/* Preferências do usuário */
+.login .container .userPreference {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em; /* Utilizando unidade relativa */
+    gap: 25%;
+}
+
+.login .container .userPreference .remember label {
+    margin-left: 0.5em; /* Utilizando unidade relativa */
+    color: rgba(143, 143, 143, 0.781);
+}
+
+.login .container .userPreference .forgotPass {
+    font-style: italic;
+    color: rgba(143, 143, 143, 0.781);
+}
+
+/* Botões */
+.login .container .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em; /* Utilizando unidade relativa */
+}
+
+.login .container .buttonLogin {
+    background: linear-gradient(90deg, rgba(45, 24, 89, 1) 7%, rgba(63, 32, 128, 1) 35%, rgba(85, 50, 187, 1) 61%, rgba(87, 58, 233, 1) 86%);
+    border: none;
+    border-radius: 1em; /* Utilizando unidade relativa */
+    width: 80%;
+    height: 3em; /* Utilizando unidade relativa */
+}
+
+.login .container .buttons .registerButton {
+    font-size: 1.2em;
+    margin-top: 1.5em; /* Utilizando unidade relativa */
+}
+
+/* Hover */
+.login .container .userPreference .remember label:hover,
+.login .container .buttonLogin:hover {
+    cursor: pointer;
+}

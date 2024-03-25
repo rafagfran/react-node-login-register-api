@@ -1,0 +1,72 @@
+/* Estilos para a seção de registro */
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(48, 39, 59, 0.171);
+}
+
+/* Estilos para o container principal */
+.register .container {
+    background-color: rgba(85, 69, 143, 0.274);
+    border-radius: 50px;
+    width: 40%; /* Alterado para largura em vez de largura mínima */
+    padding: 2em; /* Utilizando unidade relativa */
+}
+
+/* Título do formulário de registro */
+.register .container h2 {
+    margin-top: 1em; /* Utilizando unidade relativa */
+    margin-bottom: 1em; /* Utilizando unidade relativa */
+    margin-left: 10%;
+    font-size: 2em;
+}
+
+/* Campos de entrada de credenciais */
+.register .container .credentials {
+    text-align: center;
+    margin: 0 10%;
+    gap: 2em; /* Utilizando unidade relativa */
+    display: flex;
+    flex-direction: column;
+}
+
+.register .container .credentials input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.61);
+    outline: none;
+    caret-color: #fff;
+    padding: 0.5em 0; /* Ajuste de preenchimento */
+    color: rgba(255, 255, 255, 0.705);
+}
+
+.register .container .credentials input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 0.3em rgb(61, 46, 124) inset; /* Ajuste de sombra */
+    -webkit-text-fill-color: white !important;
+}
+
+.register .container .credentials input::placeholder {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+/* Botão de registro */
+.btn {
+    margin-top: 2em; /* Utilizando unidade relativa */
+    margin-bottom: 0.5em; /* Utilizando unidade relativa */
+    display: flex;
+    justify-content: center;
+}
+
+.register .container .buttonRegister {
+    background: linear-gradient(90deg, rgba(45, 24, 89, 1) 7%, rgba(63, 32, 128, 1) 35%, rgba(85, 50, 187, 1) 61%, rgba(87, 58, 233, 1) 86%);
+    border: none;
+    border-radius: 20px;
+    width: 80%;
+    height: 3em; /* Utilizando unidade relativa */
+}
+
+.register .container .buttonRegister:hover {
+    cursor: pointer;
+}
