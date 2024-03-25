@@ -8,32 +8,7 @@ app.use(express.json())
 app.use(cors())
 app.use(routes)
 
-// VALIDATE LOGIN
-app.post('/login', async (req, res) => {
-   try{
-      const { email, password } = req.body
-      const results = await new Promise((resolve, reject) => {
-         connection.query('SELECT COUNT(*) AS count FROM users WHERE email = ? AND password = ?', [email, password], (error, result) => {
-            if (error) {
-               reject(error);
-            } else {
-               resolve(result);
-            }
-         }) 
-      })
-      
-      const count = results[0].count
 
-      if(count === 1 ){
-         res.status(200).json('You are logged')
-      }else{
-         res.status(401).json('Invalid Credentials')
-      }
-
-   }catch(error){
-      res.status(401).json({ error: 'Error in login', message: error.message });
-   }
-})
 
 // USER REGISTRATION
 app.post('/register', async (req, res) => {

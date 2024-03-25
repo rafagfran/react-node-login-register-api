@@ -18,8 +18,30 @@ const allUsers = async () =>{
     }
 }
 
+const validateLogin = async (email, password) => {
+    try{
+        const results = await new Promise((resolve, reject) => {
+            connection.query('SELECT COUNT(*) AS count FROM users WHERE email = ? AND password = ?', [email, password], (error, result) => {
+                if (error){
+                    reject(error)
+                }else{
+                    resolve(result)
+                }
+            }) 
+        })
 
+        const count = results[0].count
+
+        return  count
+
+    }catch(error){
+
+    }
+}
+
+''
 module.exports = {
     allUsers,
+    validateLogin
 
 }
