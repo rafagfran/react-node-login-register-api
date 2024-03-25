@@ -1,7 +1,7 @@
 import Style from './Login.module.css'
 import { useState } from 'react';
 import axios from  'axios'
-import Avatar from '/src/assets/Avatar.png'
+import Avatar from '/src/assets/login3.png'
 
 function Login(){
 
