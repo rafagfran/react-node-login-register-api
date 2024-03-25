@@ -28,7 +28,7 @@
   <li>Antes de inciar a aplicação criar um arquivo .env e inserir os dados conforme exposto no arquivo .envExemple</li>
 </ul>
 
-###Bibliotecas necessárias NODE.JS:
+### Bibliotecas necessárias NODE.JS:
 <ul>
   <li>nodemon</li>
   <li>mysql2</li>
@@ -36,7 +36,7 @@
   <li>Express</li>
 </ul>
 
-###Bibliotecas necessárias REACT.JS:
+### Bibliotecas necessárias REACT.JS:
 <ul>
   <li>axios</li>
 </ul>
