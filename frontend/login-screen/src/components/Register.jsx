@@ -55,12 +55,13 @@ const handleLogin = async (e) => {
                             onChange={(e) => setConfirmPass(e.target.value)}
                         ></input>
                 </div>
-                <div className={style.btn}>
-                <button 
-                    type="submit" 
-                    className={style.buttonRegister}
-                    onClick={(e) => handleLogin(e)}
-                >REGISTER</button>
+                <div className={style.buttons}>
+                    <button 
+                        type="submit" 
+                        className={style.buttonRegister}
+                        onClick={(e) => handleLogin(e)}
+                    >REGISTER</button>
+                     <p className={style.loginButton}>Already have an account? <a href="/Login">Sign up</a></p> 
                 </div>
                 
             </div>

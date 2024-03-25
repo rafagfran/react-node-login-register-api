@@ -52,11 +52,14 @@
 }
 
 /* Botão de registro */
-.btn {
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 2em; /* Utilizando unidade relativa */
     margin-bottom: 0.5em; /* Utilizando unidade relativa */
-    display: flex;
-    justify-content: center;
+    
+    
 }
 
 .register .container .buttonRegister {
@@ -69,4 +72,18 @@
 
 .register .container .buttonRegister:hover {
     cursor: pointer;
+}
+
+.register .container .buttons .loginButton {
+    font-size: 1em;
+    margin-top: 1.5em; /* Utilizando unidade relativa */
+}
+
+.register .container .buttons .loginButton a{
+    color: #000000f1 ;
+    text-decoration: underline;
+}
+
+.register .container .buttons .loginButton a:hover{
+    color: #6366c4;
 }

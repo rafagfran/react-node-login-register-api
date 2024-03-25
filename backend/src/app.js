@@ -11,9 +11,9 @@ app.use(routes)
 // VALIDATE LOGIN
 app.post('/login', async (req, res) => {
    try{
-      const { username, password } = req.body
+      const { email, password } = req.body
       const results = await new Promise((resolve, reject) => {
-         connection.query('SELECT COUNT(*) AS count FROM users WHERE username = ? AND password = ?', [username, password], (error, result) => {
+         connection.query('SELECT COUNT(*) AS count FROM users WHERE email = ? AND password = ?', [email, password], (error, result) => {
             if (error) {
                reject(error);
             } else {
@@ -31,7 +31,7 @@ app.post('/login', async (req, res) => {
       }
 
    }catch(error){
-      res.status(400).json('Erro', error)
+      res.status(401).json({ error: 'Error in login', message: error.message });
    }
 })
 
