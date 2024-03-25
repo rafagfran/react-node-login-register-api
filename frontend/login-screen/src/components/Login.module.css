@@ -20,7 +20,7 @@
 
 /* Mensagem de erro */
 .login .container .errorMessage {
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 1em; /* Utilizando unidade relativa */
     font-size: 1.05em;
     color: #868686;
@@ -81,17 +81,31 @@
 }
 
 .login .container .buttonLogin {
-    background: linear-gradient(90deg, rgba(45, 24, 89, 1) 7%, rgba(63, 32, 128, 1) 35%, rgba(85, 50, 187, 1) 61%, rgba(87, 58, 233, 1) 86%);
+    background: linear-gradient(90deg, rgb(52, 28, 104) 7%, rgba(63, 32, 128, 1) 35%, rgba(85, 50, 187, 1) 61%, rgba(87, 58, 233, 1) 86%);
     border: none;
     border-radius: 1em; /* Utilizando unidade relativa */
     width: 80%;
     height: 3em; /* Utilizando unidade relativa */
 }
 
+.login .container .buttonLogin:hover{
+        background: linear-gradient(90deg, rgb(28, 15, 56) 7%, rgb(37, 19, 77) 35%, rgb(60, 35, 133) 61%, rgb(55, 37, 146));
+}
+
 .login .container .buttons .registerButton {
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 1.5em; /* Utilizando unidade relativa */
 }
+
+.login .container .buttons .registerButton a{
+    color: #000000f1 ;
+    text-decoration: underline;
+}
+
+.login .container .buttons .registerButton a:hover{
+    color: #6366c4;
+}
+
 
 /* Hover */
 .login .container .userPreference .remember label:hover,

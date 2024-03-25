@@ -62,7 +62,7 @@ function Login(){
                         className={Style.buttonLogin} 
                         onClick={(e) => handleLogin(e)}
                     >LOGIN</button>
-                    <a className={Style.registerButton} href="/Register">Register</a>
+                   <p className={Style.registerButton}>Don't have account? <a href="/Register">Create Account</a></p> 
                 </div>  
                
                 <p className={Style.errorMessage}>{error}</p>
