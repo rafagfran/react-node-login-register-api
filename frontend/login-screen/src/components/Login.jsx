@@ -5,20 +5,20 @@ import Avatar from '/src/assets/login3.png'
 
 function Login(){
 
-    const[username, setUsername] = useState('');
+    const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
     const[error, setError] = useState('');
 
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        console.log(username, password);
+        console.log(email, password);
         try{
             await axios.post('http://localhost:3000/login',
-            JSON.parse(JSON.stringify({username, password}))
+            JSON.parse(JSON.stringify({email, password}))
             )
 
-            setError(`Welcome ${username}`)
+            setError(`Welcome`)
 
         } catch (error){
             if(!error?.response){
@@ -35,11 +35,11 @@ function Login(){
                 <img className={Style.avatar_image} src={Avatar}></img>
                 <div className={Style.credentials}>
                         <input 
-                            type="text" 
-                            name="username" 
-                            placeholder="username" 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
                             required
-                            onChange={(e) => setUsername(e.target.value)}
+                            onChange={(e) => setEmail(e.target.value)}
                         ></input>
                         <input 
                             type="password" 
