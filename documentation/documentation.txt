@@ -1,0 +1,15 @@
+NODE:
+npm init
+npm install express
+npm install nodemon
+npm install cors
+Preencher .env (estrutura descrita no .evnExample)
+
+REACT:
+npm init
+npm install vite
+npm install axios
+
+DATABASE:
+DB: user_accounts
+table: users(id, name, email, password)
