@@ -4,23 +4,33 @@ import axios from 'axios'
 
 const Register = () => {
 
-const [name, setName] = useState('')
-const[email,setEmail] = useState('')
-const[pass, setPass] = useState('')
-const[confirmPass, setConfirmPass]= useState('')
-const[user, setUser] = useState (null)
+    const [name, setName] = useState('')
+    const[email,setEmail] = useState('')
+    const[password, setPassword] = useState('')
+    const[confirmPass, setConfirmPass]= useState('')
+    const[error, setError] = useState('')
+    
+    const handleLogin = async (e) => {
+        e.preventDefault();
 
-const handleLogin = async (e) => {
-    e.preventDefault();
+        console.log(name, email, password, confirmPass);
 
-    console.log(name, email, pass, confirmPass);
-
-    const response = await axios.post('http://localhost:3000/register',
-    JSON.parse(JSON.stringify({name,email, pass}))
-    )
-
-    setUser(response.data)
-}
+        try
+        {   
+            if(password != confirmPass)
+            {
+                setError('Passwords must be the same')
+            }else{
+                const response = await axios.post('http://localhost:3000/register',
+                JSON.parse(JSON.stringify({name, email, password}))
+                )
+                setError('Successfully registred')
+            }
+            
+        }catch(error){
+            throw new Error(`Error fetching users: ${error.message}`);
+        }
+    }
     return(
         <div className={style.register}>
             <div className={style.container}>
@@ -45,7 +55,7 @@ const handleLogin = async (e) => {
                             name="password" 
                             placeholder="Password"
                             required
-                            onChange={(e) => setPass(e.target.value)}
+                            onChange={(e) => setPassword(e.target.value)}
                         ></input>
                         <input 
                             type="password" 
@@ -63,7 +73,7 @@ const handleLogin = async (e) => {
                     >REGISTER</button>
                      <p className={style.loginButton}>Already have an account? <a href="/Login">Sign up</a></p> 
                 </div>
-                
+                <p className={style.errorMessage}>{error}</p>
             </div>
 
         </div>
