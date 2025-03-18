@@ -12,7 +12,7 @@
 
 <ul>
   <li>Estudo</li>
-  <li>Entender como funcionam as chamadas e os End Points em uma API REST</li>
+  <li>Entender como funcionam as chamadas para endpoints em uma API REST</li>
   <li>Aprofundar conhecimentos em integração com banco de dados relacional</li>
   <li>Aprimorar habilidades em API REST</li>
   <li>Testar funcionalidades</li>
